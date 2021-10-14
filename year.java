@@ -8,7 +8,7 @@ class year {
         y = r.nextInt();
 
         if (y % 100 == 0 && y % 400 == 0 || y % 100 != 0 && y % 4 == 0) {
-            System.out.print("Leap year");
+            System.out.print(y + " Is a Leap year");
         } else {
             System.out.print("Not a leap year");
         }

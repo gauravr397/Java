@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class primerange {
     public static void main(String[] args) {
         int a, b, i, j;
-        System.out.println("Enter the range for prime number ; ");
+        System.out.println("Enter the range for prime number : ");
         Scanner r = new Scanner(System.in);
         a = r.nextInt();
         b = r.nextInt();
