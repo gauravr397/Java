@@ -25,5 +25,3 @@ public class Outerclass {
         obj1.displayA();
     }
 }
-
-//

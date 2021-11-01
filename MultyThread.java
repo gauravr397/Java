@@ -8,8 +8,8 @@ public class MultyThread {
         Thread t3 = new Thread(r3);
 
         t1.start();
-        t1.start();
-        t1.start();
+        t2.start();
+        t3.start();
     }
 }
 

@@ -1,28 +1,34 @@
-class MultyThreadExtent {
-    public static void main(String[] args) {
-        
-         public class TestThread { public static void main(String[] args){ 
-             Thread t1 = new ExtendThread("t1",1000); //Create threads using the up-link object, andconstruct thread names and thread sleep times 
-             Thread t2 = new ExtendThread("t2",2000); Thread t3 = new ExtendThread("t3",3000); t1.start();
-         //Start the thread and call the run method 
-         t2.start(); t3.start(); } } 
-         class ExtendThread extends Thread{ //Classes that inherit Thread String name; int
-         time; 
-         public ExtendThread(String name, int time)
-          { //Construct thread nameand sleeping time 
-            this.name=name; this.time=time; } 
-        public void run(){ //run
-         Method for Rewriting Thread Classes 
-         try{ sleep(time); //All threads join dormancy 
-        } 
-         catch(InterruptedExceptione){ e.printStackTrace();
-         System.out.println("Thread interrupt exception"); }
-         System.out.println("The name is:"+name+",Thread dormancy:"+time+"Millisecond"
-         ); } }
-
-
-         
-
+class MultyThreadExtent extends Thread {
+    MultyThreadExtent() {
+        super("my extending thread");
+        System.out.println("my thread created" + this);
+        start();
     }
 
+    public void run() {
+        try {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Printing the count " + i);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("my thread interrupted");
+        }
+        System.out.println("My thread run is over");
+    }
+}
+
+class ExtendingExample {
+    public static void main(String args[]) {
+        MultyThreadExtent cnt = new MultyThreadExtent();
+        try {
+            while (cnt.isAlive()) {
+                System.out.println("Main thread will be alive till the child thread is live");
+                Thread.sleep(1500);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Main thread interrupted");
+        }
+        System.out.println("Main thread's run is over");
+    }
 }

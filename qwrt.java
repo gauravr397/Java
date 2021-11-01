@@ -14,6 +14,8 @@ public class qwrt {
             t.div(20, 0);
         } catch (Exception e) {
             System.out.println("b is zero");
+        } finally {
+            System.out.println("final block.");
         }
 
     }
