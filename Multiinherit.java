@@ -1,4 +1,4 @@
-class Peet {
+class Pet {
     void eat() {
         System.out.println("eating...");
     }
