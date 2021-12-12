@@ -7,10 +7,15 @@ public class inherit {
 }
 
 class shape {
-    Sring collor;
+    puublic void area(){
+        System.out.println("display area");
+    }
 
 }
 
 class trinagle extends shapes {
+    public void area(int l, int h) {
+        System.out.println(1 / 2 * h * l);
+    }
 
 }
