@@ -12,7 +12,7 @@ class encapsula {
 class bank {
 
     public String name;
-    protected String email;
+    protected String email; // access modifiers used for data hidding //
     private String password;
 
     // getter and setter used for using private and protected//
