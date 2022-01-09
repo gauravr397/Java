@@ -8,15 +8,20 @@ public class arraypract {
          * System.out.println(A[i]);
          * }
          */
+        int sum = 0;
 
         /*
          * for (int i = 0; i <= B.length; i++) {
-         * System.out.println(B[i]);
+         * sum = sum + B[i];
+         * System.out.println(sum);
          * }
          */
+
         for (int x : B) {
-            System.out.println(x);
+            sum = sum + x;
+            System.out.println(sum);
         }
+
     }
 
 }
